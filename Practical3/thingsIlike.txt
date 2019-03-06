@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+I like banana
+I like Jenny
+I like cheese
+I like BBQ
+I like linyanjun
+I like justin
+I like sunny
+I like jackson
+I like sunshine
+I like you
+=======
+bobo
+>>>>>>> jennychen
