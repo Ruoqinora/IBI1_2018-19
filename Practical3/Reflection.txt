@@ -1,0 +1,8 @@
+I learned how to create new files and commit changes to them.
+I found it more difficult and complex to creat a new branch and merge it to the master one, I asked teacher to help but I'm still confused now 
+I'm thiking to try it again after I finish this relection or later today.
+I successfully create my GitHub account and connect it with GitKraken, and know how to fork, how to make changes in Github and then commit it in the GitKraren, it's interesting to see that they can work cooperatively.
+I learned how to clone repos from Github to Gitkraken, but I still have a question.
+I'm confused about 'Your fork is for you to edit and play around with, but it will not change the Master copy of practical instructions'.
+It's interesting to make a website with Github pages and I'm looking forward to make a more complex and attractive one.
+I think we need more practice, both me and Jenny think we cannot do these if we do not have the guidance.
