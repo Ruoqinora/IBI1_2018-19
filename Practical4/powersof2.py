@@ -14,14 +14,27 @@ Created on Wed Mar 13 11:05:26 2019
 #finally when xn=x(n-1)-2**a(n-1)=0 done
 #then 2019=2**a1+2**a2+……+2**a(n-1)
 
-x=2019
-a=1
-while x>0:
-    while 2**a<x:
-          a=a+1
-    a=a-1
-    x=x-2**a
+#define x as the power, count down from 13
+x=13
+#n as the input number
+n=int(input())
+#a as the output
+a=str(n)+"is 2**"
+# while loop
+while n!=0:
+    if n-2**x<0:
+        x=x-1# continue another power number
+        continue
+    if n-2**x>0:
+        a=a+str(x)+"+2**"
+        n=n-2**x
+        continue
+    if n-2**x==0:
+        a=a+str(x)
+        break
     print(a)
+    
+    
     
 
 
