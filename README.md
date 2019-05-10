@@ -1,2 +1,2 @@
-# IBI1_2018-19
-GitHub repository for IBI1 2018/19 at ZJU/UoE
+#Welcome
+My nama is Nora. I am a freshman student from ZJE. My major is biomedical informatics. I come from north of China and I enjoy a lot my university life.
