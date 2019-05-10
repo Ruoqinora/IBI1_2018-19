@@ -18,14 +18,16 @@ print (p)
 
 X=True
 Y=False
-if (X and not Y) or (Y and not X):
-    print("z is true")
+Z=(X and not Y) or (Y and not X)
+if Z:
+    print("Z is true")
 else:
-    print("z is not true")
+    print("Z is not true")
     
 X=False
 Y=True
-if X!=Y:
-    print("w is true")
+W=(X!=Y)
+if W:
+    print("W is true")
 else:
-    print("w is not true")
+    print("W is not true")

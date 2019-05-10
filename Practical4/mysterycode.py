@@ -1,5 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 13 10:41:21 2019
+
+@author: 19305
+"""
+
 # What does this piece of code do?
-# Answer: 
+# Answer: to select prime numbers
 
 # Import libraries
 # randint allows drawing a random number, 
@@ -18,8 +25,9 @@ while p==False:
     for i in range(2,u+1):
         if n%i == 0:
             p=False
+   
+  
 
 
      
 print(n)
-            
