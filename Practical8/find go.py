@@ -9,11 +9,14 @@ import xml.dom.minidom
 import re
 import pandas as pd
 
+#open files
 filePath=r'D:\IBI\IBI1_2018-19\Practical8';#file path
 fileName='go_obo.xml';
 resName='autophagosome.xlsx'
 file=filePath+'/'+fileName
 res=filePath+'/'+resName
+
+
 
 re_immu=re.compile(r'autophagosome')
 #fuction to find childnodes

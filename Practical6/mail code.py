@@ -23,7 +23,7 @@ for line in address:
     line=re.split(',',line)
     if re.match(r'(\S+)@(\S+)+(\.\S)',line[1]):#select correct address
         print(line[1],':','Correct address')
-        correct_address.append(line[1])
+        correct_address.append(line[1])#add correct addresses to a list
         name.append(line[0])
         subject.append(line[2])
     else:
@@ -35,8 +35,10 @@ with open(r"body.txt",'r') as content:
     data1=data[::]
     
 username=input('Please input your zju username:')
-password=getpass.getpass('please input the password:')#make password be invisible
+password=getpass.getpass('please input the password:')
+#make password be invisible
 yourname=input('Please input your name:')
+
 for i in range(3):
     data=data1.replace('User',name[i])# change 'User' in content into names
     # send emails

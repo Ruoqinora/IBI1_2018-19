@@ -38,7 +38,7 @@ dic=readdic('blosum62.txt')
 #calculate the score
 score=0
 for i in range(0,len(human)):# same length
-    score=score+(int(dic[human[i]][mouse[i]]))
+    score=score+(int(dic[human[i]][mouse[i]]))# read the corresponding numbers
     #print(score)
 print('The BLOSUM score is:'+str(score))
     
