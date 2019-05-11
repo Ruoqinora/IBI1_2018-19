@@ -1,0 +1,2 @@
+Summary for practical 9:
+During this practical, I managed to create a two-dimensions dictionary to read 
