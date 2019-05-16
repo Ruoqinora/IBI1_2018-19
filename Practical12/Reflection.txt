@@ -1,0 +1,4 @@
+Reflection for practical 12:
+It is easy to create codes by following the given guide, but several details need to pay attention to, such as the changes of parameters.
+It helped us to focus on infection in different situations. The most important thing I learned is to select the infected and recovered ones randomly and add new arrays to a bigger array.
+

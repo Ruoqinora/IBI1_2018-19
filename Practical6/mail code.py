@@ -22,12 +22,12 @@ subject=[]
 for line in address:
     line=re.split(',',line)
     if re.match(r'(\S+)@(\S+)+(\.\S)',line[1]):#select correct address
-        print(line[1],':','Correct address')
+        print(line[1],':','Correct address')# print the correct address
         correct_address.append(line[1])#add correct addresses to a list
         name.append(line[0])
         subject.append(line[2])
     else:
-        print(line[1],':','Wrong address')
+        print(line[1],':','Wrong address')#print the wrong address
 address.close()
 #read content from body.txt
 with open(r"body.txt",'r') as content:
@@ -40,7 +40,9 @@ password=getpass.getpass('please input the password:')
 yourname=input('Please input your name:')
 
 for i in range(3):
-    data=data1.replace('User',name[i])# change 'User' in content into names
+    data=data1.replace('User',name[i])
+    # change 'User' in body.txt into names
+    content.close()
     # send emails
     try:
         sender=username+'@zju.edu.cn'

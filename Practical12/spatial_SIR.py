@@ -13,10 +13,10 @@ import matplotlib.pyplot as plt
 population=np.zeros((100,100))
 #print(population[4,12])
 
-outbreak=np.random.choice(range(100),2)
+outbreak=np.random.choice(range(100),2)# random selection of one infected individual
 population[outbreak[0],outbreak[1]]=1
 
-
+#define necessary parameters
 S=9999
 I=1
 R=0
@@ -25,18 +25,16 @@ gamma=0.05
 
 # find infected points
 infectedIndex = np.where(population==1)
-#because tuple can not be changed, create arrays
-infectedIndex2=infectedIndex[0]
-infectedIndex3=infectedIndex[1]
-
-#print(type(infectedIndex2))
 
 # loop through all infected points
-for j in range(100):
-    for i in range(len(infectedIndex2)):
+for j in range(0,101):
+    infectedIndex = np.where(population==1)
+    for i in range(len(infectedIndex[0])):
         # get x, y coordinates for each point
-        x = infectedIndex2[i]
-        y = infectedIndex3[i]
+        x = infectedIndex[0][i]
+        y = infectedIndex[1][i]
+        #recover
+        population[x,y]=np.random.choice(range(1,3),1,p=[1-gamma,gamma])[0]
         # infect each neighbour with probability beta
         # infect all 8 neighbours (this is a bit finicky, is there a better way?):
         for xNeighbour in range(x-1,x+2):
@@ -48,15 +46,8 @@ for j in range(100):
                         # only infect neighbours that are not already infected!
                         if population[xNeighbour,yNeighbour]==0:
                             population[xNeighbour,yNeighbour]=np.random.choice(range(2),1,p=[1-beta,beta])[0]
-                            if population[xNeighbour,yNeighbour]==1:
-                                infectedIndex2=np.append(infectedIndex2,xNeighbour)
-                                infectedIndex3=np.append(infectedIndex3,yNeighbour)
-
-                        if population[xNeighbour,yNeighbour]==1:
-                            population[xNeighbour,yNeighbour]=np.random.choice(range(3),1,p=[0,1-gamma,gamma])
-    
-    
-    
-    plt.figure(figsize=(6,4),dpi=150)
-    plt.imshow(population,cmap='viridis',interpolation='nearest')
-plt.show()
+                            
+#make plots  
+    if j in [0,10,50,100]:#print several plots from all
+        plt.figure(figsize=(6,4),dpi=150)
+        plt.imshow(population,cmap='viridis',interpolation='nearest')

@@ -21,7 +21,7 @@ while i:
             print('The input number must be intergers from 1 to 23')
             i=1
             break
-num=list(map(int,numlist))
+num=list(map(int,numlist))#put numbers in a list
 
 #recursion times
 count=0
@@ -29,10 +29,10 @@ count=0
 #way to get 24
 solution=0
 
-#define a function
+#define a function for recursion
 #n is len(num)
 
-def dys(n):
+def func(n):
     global count
     global solution
     count=count+1
@@ -43,7 +43,7 @@ def dys(n):
             return 1
         else:
             return 0
-    #select two different numbers and operate
+    #select two different numbers and test all operations
     for i in range(0,n):
         for j in range(i+1,n):
             a=num[i]
@@ -52,27 +52,27 @@ def dys(n):
             
             #replace a with the operation results of a and b
             num[i]=a+b 
-            if(dys(n-1)):
+            if(func(n-1)):
                 return 1
             
             num[i]=b-a
-            if(dys(n-1)):
+            if(func(n-1)):
                 return 1
             
             num[i]=a*b
-            if(dys(n-1)):
+            if(func(n-1)):
                 return 1
             
             # to determine whether a/b or b/a makes sense.
             if a:
                 #floats are not precise
                 num[i]=Fraction(b,a)
-                if(dys(n-1)):
+                if(func(n-1)):
                     return 1
                 
             if b:
                 num[i]=Fraction(a,b)
-                if(dys(n-1)):
+                if(func(n-1)):
                     return 1
             
             #Backtracking
@@ -80,10 +80,10 @@ def dys(n):
             num[i]=b
     return 0
 
-if (dys(len(num))):# if there exist sulotions
+if (func(len(num))):# if there exist sulotions
     print('YES')
 else:
     print('NO')
-print('Recursion times:',count,',Solution:',solution)            
+print('Recursion times:',count,',Solution:',solution) #return recursion times and numbers of solutions           
         
         

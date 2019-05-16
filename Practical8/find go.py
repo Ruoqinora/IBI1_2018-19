@@ -18,9 +18,10 @@ res=filePath+'/'+resName
 
 
 
+
 re_immu=re.compile(r'autophagosome')
 #fuction to find childnodes
-def Child(id,resultSet):
+def Child(id,resultSet):#count childnodes
     for t in go:
         parents=t.getElementsByTagName('is_a')
         geneid=t.getElementsByTagName('id')[0].childNodes[0].data
@@ -35,8 +36,8 @@ def Child(id,resultSet):
 df=pd.DataFrame(columns=['id','name','defination','childnodes'])
 
 #create the DOM tree
-DOMTree =xml.dom.minidom.parse(file)
-obo=DOMTree.documentElement
+tree =xml.dom.minidom.parse(file)
+obo=tree.documentElement
 go=obo.getElementsByTagName('term')
 for term in go:
     defstr=term.getElementsByTagName('defstr')[0].childNodes[0].data
