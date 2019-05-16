@@ -1,0 +1,7 @@
+Summary for practical 9:
+The BLOSUM score for human mouse comparison is:1091
+The BLOSUM score for human random seq comparison is:-250
+The BLOSUM score for mouse random seq comparison is:-250
+Identity for human mouse comparison is :89.63963963963964%
+Identity for human random seq comparison is:5.405405405405405%
+Identity for human random seq comparison is:5.8558558558558556%
