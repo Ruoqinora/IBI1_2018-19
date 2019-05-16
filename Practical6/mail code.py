@@ -41,7 +41,7 @@ yourname=input('Please input your name:')
 
 for i in range(3):
     data=data1.replace('User',name[i])
-    # change 'User' in body.txt into names
+    # change 'User' in body.txt into names from address_information
     content.close()
     # send emails
     try:

@@ -4,19 +4,13 @@ Created on Wed Mar 20 10:06:19 2019
 
 @author: 19305
 """
-
+#input a string
 s=input("Give me a string of words:")
+#reverse the string
 s=s[::-1]
+#split the string into list
 L=s.split()
-L1=sorted(L)
-L1.reverse()
-print(L1)
+reverseword=sorted(L)
+reverseword.reverse()
+print(reverseword)
 
-
-s=input()
-words=s.split(" ")
-reversewords=[]
-for word in words:
-    reversewords.append(word[::-1])
-reversewords.sort(reverse=True)
-print(reversewords)

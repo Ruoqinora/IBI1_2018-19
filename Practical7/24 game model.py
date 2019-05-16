@@ -27,19 +27,19 @@ num=list(map(int,numlist))#put numbers in a list
 count=0
 
 #way to get 24
-solution=0
+#solution=0
 
 #define a function for recursion
 #n is len(num)
-
+# operate until only two numbers left in the list and operate these two numbers 
 def func(n):
     global count
-    global solution
-    count=count+1
+    #global solution
+    count=count+11,2
     
     if n==1:
         if(float(num[0])==24):
-            solution=solution+1
+            #solution=solution+1
             return 1
         else:
             return 0
@@ -59,6 +59,10 @@ def func(n):
             if(func(n-1)):
                 return 1
             
+            num[i]=a-b
+            if(func(n-1)):
+                return 1
+            
             num[i]=a*b
             if(func(n-1)):
                 return 1
@@ -75,7 +79,7 @@ def func(n):
                 if(func(n-1)):
                     return 1
             
-            #Backtracking
+            #backtracking
             num[i]=a
             num[i]=b
     return 0
@@ -84,6 +88,7 @@ if (func(len(num))):# if there exist sulotions
     print('YES')
 else:
     print('NO')
-print('Recursion times:',count,',Solution:',solution) #return recursion times and numbers of solutions           
+print('Recursion times:',count)#,',Solution:',solution) 
+#return recursion times and numbers of solutions           
         
         
