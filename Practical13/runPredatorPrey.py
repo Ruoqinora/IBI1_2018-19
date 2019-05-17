@@ -92,16 +92,17 @@ plt.ylabel("prey(b=0.1,d=0.02)")
 plt.title('Limit cycle')
 plt.plot(results[:,0],results[:,1])
         
-        
+#open xml file       
 #changing values and running the simulation again
 #define four new parameters
 #import xml.dom.minidom change parameters and save them
 #make the plot
 
-#running many simulations
-#import numpy
+
+#simulate many simulations
 #select combination of parameters
 #make seperate plots by creating loops
+#print the max number of predator and prey
 
 
 

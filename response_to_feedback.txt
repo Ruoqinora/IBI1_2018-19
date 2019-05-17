@@ -1,0 +1,13 @@
+for week 3:
+I have changed some information in my website pages.
+
+for week 4:
+In file variables.py, I have defined variables Z and W as specified in instructions.
+In file Collatz, I have added my Psedocode.
+In file mystery_code.py, I have added an answer to explain what the code does.
+In powers of 2, I have fixed the problem. The problem existed because the original one is not my final version.
+
+for week 5:
+In the nucleotide counting script, I have added "Please enter a DNA sequence :" when asking users to input.
+Also, I have changed my code to make it works when users input a DNA sequence without spaces.
+In the script that reverses and orders a string, I have added a prompt.
